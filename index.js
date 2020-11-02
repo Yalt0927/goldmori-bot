@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = process.argv.length == 2 ? process.env.token : "NzcwMjE0ODgzMTU3MjEzMTk2.X5aUgg.K42WpSeBtWAIcVY2AlOSY0mMXnE";
+const token = process.argv.length == 2 ? process.env.token : "";
 const moment = require("moment");
 require("moment-duration-format");
 const welcomeChannelName = "안녕하세요";
@@ -10,7 +10,7 @@ const byeChannelComment = "안녕히가세요.";
 
 client.on('ready', () => {
   console.log('켰다.');
-  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
+  client.user.setPresence({ game: { name: 'goldmori server' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -34,8 +34,8 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == 'ping') {
-    return message.reply('pong');
+  if(message.content == '!카카오톡 가입') {
+    return message.reply('카카오톡 주소 : https://open.kakao.com/o/gk1et6Cc');
   }
 
   if(message.content == '!si') {
